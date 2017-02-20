@@ -2,25 +2,42 @@
 	height: 100%;
 	.imocco-header{
 		width: 100%;
-		border: 1px solid;
-		height: 100px;
+		height: 90px;
+		background: #20a0ff;
+		border-bottom: 1px solid #ddd;
 	}
 	.imocco-main{
 		width: 100%;
-		top:100px;
+		top:90px;
 		bottom: 0px;
 		position: absolute;
 		.imocco-left{
-			width: 20%;
-			border-right: 1px solid;
+			background: #20a0ff;
+			transition:.5s;
+			width: 200px;
 			height: 100%;
-			float: left;
+			bottom: 0;
+			left:0;
+		}
+		.imocco-left-close{
+			transition:.5s;
+			width: 50px;
 		}
 		.imocco-right{
-			float: right;
-			border: 1px solid red;
-			width: 80%;
+			position: absolute;
+			border: 1px solid ;
+			transition:.5s;
 			height: 100%;
+			left: 200px;
+			bottom: 0;
+			right: 0;
+		}
+		.imocco-right-open{
+			position: absolute;
+			transition:.5s;
+			left: 50px;
+			bottom: 0;
+			right: 0;
 		}
 	}
 }
