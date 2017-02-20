@@ -1,0 +1,26 @@
+.imocco{
+	height: 100%;
+	.imocco-header{
+		width: 100%;
+		border: 1px solid;
+		height: 100px;
+	}
+	.imocco-main{
+		width: 100%;
+		top:100px;
+		bottom: 0px;
+		position: absolute;
+		.imocco-left{
+			width: 20%;
+			border-right: 1px solid;
+			height: 100%;
+			float: left;
+		}
+		.imocco-right{
+			float: right;
+			border: 1px solid red;
+			width: 80%;
+			height: 100%;
+		}
+	}
+}

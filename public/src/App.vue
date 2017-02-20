@@ -9,3 +9,8 @@
     store
   };
 </script>
+<style type="text/css">
+	#wrapper{
+		height: 100%;
+	}
+</style>
