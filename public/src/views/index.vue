@@ -4,9 +4,10 @@
       <top></top>
     </div>
     <div class="imocco-main">
-      <div class="imocco-left {{closeLeft?'imocco-left-close':''}}" @click="closeLeft=!closeLeft">
+      <div class="imocco-left {{close?'imocco-left-close':''}}">
+      <left :show.sync='close'></left>
       </div>
-      <div class="imocco-right {{closeLeft?'imocco-right-open':''}}" @click="closeLeft=!closeLeft">
+      <div class="imocco-right {{close?'imocco-right-open':''}}">
         <router-view  class="view" keep-alive transition transition-mode="out-in"> 
         </router-view>
       </div>
@@ -15,10 +16,12 @@
 </template>
 <script>
   import './../../static/css/index.scss';
-  import top from './header.vue';
+  import top from './common/header.vue';
+  import left from './common/left.vue';
   export default {
     components: {
-      top
+      top,
+      left
     },
     vuex: {
       getters: {
@@ -30,7 +33,7 @@
     },  
     data(){
       return{
-        closeLeft:false
+        close:false
       };
     },
     route:{
