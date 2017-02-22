@@ -1,9 +1,16 @@
 <template>
 	<div class="imocco-left-s">
 		<div class="imocco-left-first">
-			<ul>
-				<li v-for="menu in menus">
-					<div>{{menu.name}}</div>
+			<ul class="imocco-left-first-ul">
+				<li v-for="menu in menus" class="imocco-left-first-ul-li" @click="sel(menu.opened, $index, $event)">
+					<i :class="menu.icon" class="imocco-left-icon-left"></i>
+					<span v-show="!show" class="imocco-left-first-ul-li-span">{{menu.name}}</span>
+					<i class="glyphicon {{ menu.opened?'glyphicon-menu-up':'glyphicon-menu-down'}} imocco-left-icon" v-show="!show"></i>
+				</li>
+			</ul>
+			<ul class="imocco-left-first-ul-li-ul" v-if="menus[selIndex].child" v-show="menus[selIndex].opened && !show" >
+				<li class="imocco-left-first-ul-li-ul-li" v-for="child in menus[selIndex].child">
+					<span class="imocco-left-first-ul-li-ul-li-span">{{child.name}}</span>
 				</li>
 			</ul>
 		</div>
@@ -13,14 +20,16 @@
 	</div>
 </template>
 <script>
+	import './../../../static/css/left.scss';
 	module.exports = {
 		props:['show'],
 		data(){
 			return{
+				selIndex:0,
 				menus:[{
 					name:'订单管理',
 					opened:false,
-					icon:'',
+					icon:'glyphicon glyphicon-user',
 					child:[{
 						name:'订单列表',
 						opened:false,
@@ -49,26 +58,12 @@
 			};
 		},
 		methods:{
+			sel(opened, index, event){
+				this.menus[index].opened = !this.menus[index].opened;
+				this.selIndex = index;
+				console.info(event.target.offsetTop);
+			}
+
 		}
 	};
 </script>
-<style type="text/css">
-	.imocco-left-i{
-		bottom: 10px;
-		cursor: pointer;
-	}
-	.imocco-left-bottom{
-		bottom: 10px;
-		text-align: center;
-		position: absolute;
-		width: 200px;
-		transition:.5s;
-	}
-	.imocco-left-bottom-close{
-		transition:.5s;
-		width: 50px;
-		position: absolute;
-		bottom: 10px;
-		text-align: center;
-	}
-</style>
