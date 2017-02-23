@@ -23,13 +23,15 @@
 .imocco-left-first-ul{
 	list-style: none;
 	padding: 0px;
+	padding-left: 10px;
 	.imocco-left-first-ul-li{
 		line-height: 50px;
+		cursor: pointer;
 		.imocco-left-icon-left{
 			margin-right: 15px;		
 		}
 		.imocco-left-first-ul-li-span{
-			animation-delay: .5;
+			transition-delay: 0.5s;
 		}
 	}
 	.imocco-left-first-ul-li:hover{
@@ -45,10 +47,15 @@
 	list-style: none;
 	padding: 0;
 	background-color: #20a0ff;
+	position: absolute;
+	width: 200px;
+	top: 50px;
+	z-index: 999;
 	.imocco-left-first-ul-li-ul-li{
 		line-height: 45px;
+		cursor: pointer;
 	}
 	.imocco-left-first-ul-li-ul-li:hover{
-		background-color: red;
+		background-color: #ddd;
 	}
 }

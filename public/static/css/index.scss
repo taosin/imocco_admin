@@ -13,20 +13,20 @@
 		position: absolute;
 		.imocco-left{
 			background: #20a0ff;
-			transition:.5s;
+			transition:.3s;
 			width: 200px;
 			height: 100%;
 			bottom: 0;
 			left:0;
 		}
 		.imocco-left-close{
-			transition:.5s;
+			transition:.3s;
 			width: 50px;
 		}
 		.imocco-right{
 			position: absolute;
 			border: 1px solid ;
-			transition:.5s;
+			transition:.3s;
 			height: 100%;
 			left: 200px;
 			bottom: 0;
@@ -34,7 +34,7 @@
 		}
 		.imocco-right-open{
 			position: absolute;
-			transition:.5s;
+			transition:.3s;
 			left: 50px;
 			bottom: 0;
 			right: 0;
