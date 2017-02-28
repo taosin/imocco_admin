@@ -29,6 +29,8 @@
 		border: 1px solid #dfe6ec;
 		font-size: 14px;
 		color: #1f2d3d;
+		overflow-x: auto;
+		
 		.imtable thead th{
 			border-bottom: 1px solid #dfe6ec;
 			white-space: nowrap;
