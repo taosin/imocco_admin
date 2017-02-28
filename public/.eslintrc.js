@@ -48,6 +48,7 @@ module.exports = {
         'prefer-rest-params':0,
         'no-confusing-arrow':0,
         'no-unneeded-ternary':0,
-        'no-implied-eval':0
+        'no-implied-eval':0,
+        'global-require':0
     }
 }
