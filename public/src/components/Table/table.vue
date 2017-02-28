@@ -30,7 +30,7 @@
 		font-size: 14px;
 		color: #1f2d3d;
 		overflow-x: auto;
-		
+
 		.imtable thead th{
 			border-bottom: 1px solid #dfe6ec;
 			white-space: nowrap;
@@ -54,6 +54,9 @@
 		}
 		.imtable tbody tr:last-child{
 			border-bottom: none;
+		}
+		.imtable tbody tr td:last-child{
+			border-right: none;
 		}
 	}
 	.table{
