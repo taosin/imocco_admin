@@ -23,6 +23,17 @@ module.exports = {
                     this.msg = this.option.text;
                 }
             }
+        },
+        typeValidate(type){
+            switch(type) {
+                case 'mail':
+                    
+                    break;
+                case 'number':
+                    
+                    break;
+                default:
+            }
         }
     }
 }

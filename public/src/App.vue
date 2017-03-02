@@ -12,6 +12,6 @@
 <style type="text/css">
 	#wrapper{
 		height: 100%;
-    color: #324057;
+    color: #818a91;
   }
 </style>

@@ -54,14 +54,14 @@
 					}]
 				},
 				{
-					name:'用户管理',
+					name:'文章管理',
 					opened:false,
 					icon:'glyphicon glyphicon-user',
 					child:[{
-						name:'用户列表',
+						name:'文章列表',
 						url:''
 					}, {
-						name:'添加用户',
+						name:'发布文章',
 						url:''
 					}]
 				}
