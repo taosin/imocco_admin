@@ -21,6 +21,7 @@
 </template>
 <script>
 	import './../../../static/css/left.scss';
+	import { getLeftMenus } from './../../service/left.js';
 	module.exports = {
 		props:['show'],
 		data(){
@@ -77,6 +78,11 @@
 						this.menus[i].opened = false;
 					}
 				}
+			}
+		},
+		vuex:{
+			getters:{
+				result: state => state.leftmenus
 			}
 		},
 		methods:{

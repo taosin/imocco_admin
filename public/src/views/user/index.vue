@@ -2,17 +2,20 @@
     <div class="user">
         <im-input :option="user"></im-input>{{user.value}}
         <im-input :option="email"></im-input>
-        <im-table :data="datas" :columns="columns" ></im-table>
+        <im-select :datas="items" :placeholder="placeholder"></im-select>
+        <!-- <im-table :data="datas" :columns="columns" ></im-table> -->
         <im-pagination size="md" variant="primary" :total-rows="total" :current-page.sync="currentpage" :per-page="pagesize"></im-pagination>
+        <im-select :datas="items" :placeholder="placeholder"></im-select>
     </div>
 </template>
 <script>
-    import { imInput, imTable, imPagination } from './../../components/index.js';
+    import { imInput, imTable, imPagination, imSelect } from './../../components/index.js';
     export default{
         components:{
             imInput,
             imTable,
-            imPagination
+            imPagination,
+            imSelect
         },
         data(){
             return{
@@ -84,8 +87,15 @@
                 op3:{
                     text: '手机号',
                     render: (value, data, index) => value,
-                }
+                },
             },
+            items:[
+            { val:'1', label:'篮球' },
+            { val:'2', label:'足球' },
+            { val:'3', label:'冰球' },
+            { val:'4', label:'棒球' }
+            ],
+            placeholder:'请选择'
         };
     },
     ready(){

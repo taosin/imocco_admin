@@ -1,11 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import createLogger from 'vuex/logger';
+import left from './modules/left';
 Vue.use(Vuex);
 Vue.config.debug = true;
 
 const debug = process.env.NODE_ENV !== 'production';
-const allModules = [];
+const allModules = [left];
 const state = {};
 const mutations = {};
 allModules.forEach((module) => {
