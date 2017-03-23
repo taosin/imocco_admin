@@ -41,6 +41,18 @@ router.map({
           require(['./views/order/index.vue'], resolve);
         }
       },
+      '/article/list': {
+        name: '/article/list',
+        component(resolve) {
+          require(['./views/article/index.vue'], resolve);
+        }
+      },
+      '/article/add': {
+        name: '/article/add',
+        component(resolve) {
+          require(['./views/article/add.vue'], resolve);
+        }
+      },
     }
   },
 });

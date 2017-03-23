@@ -60,10 +60,10 @@
 					icon:'glyphicon glyphicon-user',
 					child:[{
 						name:'文章列表',
-						url:''
+						url:'/article/list'
 					}, {
 						name:'发布文章',
-						url:''
+						url:'/article/add'
 					}]
 				}
 				],

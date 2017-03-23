@@ -246,7 +246,7 @@ exports.install = function install(Vue) {
     // 拦截器
     Vue.http.interceptors.push({
         request(request) {
-            request.url='http://localhost:8182'+request.url;
+            request.url='http://localhost:8113'+request.url;
             return request;
         },
         response(response) {

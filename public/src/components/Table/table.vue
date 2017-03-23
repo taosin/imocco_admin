@@ -36,7 +36,7 @@
 			white-space: nowrap;
 			overflow: hidden;
 			background-color: #eef1f6;
-			text-align: center;
+			text-align: left;
 			border-right: 1px solid #dfe6ec;
 
 		}
@@ -48,8 +48,8 @@
 		}
 		.imtable tbody tr td{
 			white-space: nowrap;
+			text-align: left !important;
 			overflow: hidden;
-			text-align: center;
 			border-right: 1px solid #dfe6ec;
 		}
 		.imtable tbody tr:last-child{

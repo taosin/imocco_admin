@@ -45,7 +45,7 @@ module.exports = {
     directives: {
         gridcell(html) {
             const cell = document.createElement('DIV');
-            cell.style.textAlign = 'center';
+            cell.style.textAlign = 'left';
             cell.innerHTML = html;
             this.vm.$compile(cell);
             this.el.innerHTML = '';

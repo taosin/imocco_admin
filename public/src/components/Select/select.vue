@@ -2,7 +2,7 @@
 	<div class="im-select">
 		<input type="text" @click="showLi($event)" class="im-select-input" readonly :placeholder="placeholder" v-model="input">
 		<div class="im-select-model" v-show="show" @click.stop="show =false">
-			<ul v-show="show" :style="{top: top + 'px', left:left + 'px'}">
+			<ul v-show="show" :style="{top: top + 'px', left:left + 'px'}" transition="expand" transition-mode="out-in">
 				<li v-for="data in datas" @click="choose(data.val, data.label)">{{data.label}}</li>
 			</ul>
 		</div>
@@ -62,6 +62,21 @@
 			right: 0;
 			bottom: 0;
 			z-index: 9998;
+		}
+
+		.expand-enter {
+			animation: expand-in 0.5s;
+		}
+
+		.expand-leave{
+			animation: expand-out 0.5s;
+		}
+
+		@keyframes expand-in {
+			
+		}
+
+		@keyframes expand-out {
 		}
 	}
 </style>

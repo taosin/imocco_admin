@@ -44,7 +44,6 @@
     },
     watch:{
             $route(to, from){
-              debugger;
                 // console.log(to);
                 // if (!to.matched.length) {
                 //     this.$router.push('/404');
